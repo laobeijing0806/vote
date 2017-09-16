@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "noResolve": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "strictNullChecks": false,
+    "allowJs": true,
+    "pretty": true,
+    "outDir": "./dist"
+  },
+  "include": [
+      "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

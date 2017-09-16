@@ -1,0 +1,28 @@
+{
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.24",
+    "@types/koa-router": "^7.0.23",
+    "@types/koa-send": "^3.3.0",
+    "@types/koa-static": "^3.0.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.2.1",
+    "koa-send": "^4.1.0",
+    "koa-static": "^4.0.1",
+    "mongoose": "^4.11.10",
+    "typescript": "^2.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "tsc -w & nodemon ./dist/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,533 @@
+html {
+  font-family: Microsoft YaHei;
+  font-size: 62.5%;
+}
+
+body,
+ul,
+h2,
+h3,
+input,
+textarea,
+button,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+a, img {
+  -webkit-touch-callout: none;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+li,
+a,
+button {
+  display: block;
+  list-style: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.main-page {
+  width: 100%;
+  background-color: #efeff4;
+  position: relative;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #efeff4;
+  position: relative;
+}
+
+.main h2, .main-page h2 {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 0.6rem;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 3rem;
+  color: #7e7e83;
+}
+
+.line {
+  display: block;
+  width: 52%;
+  height: 0.1rem;
+  margin: 0 auto;
+  background: url('../pic/boldLine.png') no-repeat center center;
+  background-size: contain;
+}
+
+
+/*菜单样式*/
+.position-layer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.menu {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 -0.1rem #dbdbe0;
+  -webkit-box-shadow: 0 -0.1rem #dbdbe0;
+  bottom: 0;
+}
+
+.menu ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+
+.menu-normal {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 -0.1rem #dbdbe0;
+  -webkit-box-shadow: 0 -0.1rem #dbdbe0;
+  bottom: 0;
+}
+
+.menu-normal ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+
+.icon-vote {
+  width: 2.7rem;
+  height: 6rem;
+  display: inline-block;
+  background: url('../pic/vote.png') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-vote-tap {
+  width: 100%;
+  height: 6rem;
+  display: inline-block;
+  background: url('../pic/vote_afterclick.png') no-repeat center center;
+  background-size: 6rem 7.4rem;
+}
+
+.icon-question {
+  width: 2.7rem;
+  height: 6rem;
+  display: inline-block;
+  background: url('../pic/question.png') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-question-tap {
+  width: 100%;
+  height: 6rem;
+  display: inline-block;
+  background: url('../pic/question_afterclick.png') no-repeat center center;
+  background-size: 6.2rem 7.5rem;
+}
+
+.icon-user {
+  width: 2.5rem;
+  height: 6rem;
+  display: inline-block;
+  background: url('../pic/user.png') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-user-tap {
+  width: 100%;
+  height: 6rem;
+  display: inline-block;
+  background: url('../pic/user_afterclick.png') no-repeat center center;
+  background-size: 5.7rem 7.5rem;
+}
+
+
+/*问卷和投票列表页面样式*/
+
+.content {
+  margin-top: 2.5rem;
+}
+
+.content ul {
+  padding-bottom: 10rem;
+}
+
+.content ul li {
+  height: 6rem;
+  margin-bottom: 3%;
+  background-color: #fff;
+}
+
+.content ul li a {
+  width: 95%;
+  height: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+.user-release {
+  display: table-cell;
+  vertical-align: middle;
+  color: #7e7e83;
+  width: 51%;
+  font-size: 1.5rem;
+}
+
+.deadline {
+  display: table-cell;
+  vertical-align: middle;
+  width: 35%;
+  font-size: 1.2rem;
+  color: #7e7e83;
+}
+
+.icon {
+  display: table-cell;
+  width: 3%;
+  background: url('../pic/arrow.png') no-repeat center center;
+  background-size: 0.9rem 1.8rem;
+}
+
+.button-animation {
+  position: fixed;
+  right: 25%;
+  bottom: 15%;
+  z-index: 999;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.button-animation div a {
+  height: 7rem;
+}
+
+.vote-button {
+  position: absolute;
+  bottom: -0.2rem;
+  z-index: 997;
+  width: 6.5rem;
+  height: 7.5rem;
+  background: url('../pic/voteButton.png') no-repeat center center;
+  background-size: 8rem 8rem;
+  cursor: pointer;
+  visibility: hidden;
+  transition: visibility 0.1s linear, transform 0.2s linear;
+  -webkit-transition: visibility 0.1s linear, transform 0.2s linear;
+}
+
+.questionnaire-button {
+  position: absolute;
+  bottom: -0.2rem;
+  z-index: 998;
+  width: 6.5rem;
+  height: 7.5rem;
+  background: url('../pic/questionButton.png') no-repeat center center;
+  background-size: 8rem 8rem;
+  cursor: pointer;
+  visibility: hidden;
+  transition: visibility 0.1s linear, transform 0.2s linear;
+  -webkit-transition: visibility 0.1s linear, transform 0.2s linear;
+}
+
+.arise-vote-button {
+  visibility: visible;
+  transform: translate(0, -12.5rem);
+  -webkit-transform: translate(0, -12.5rem);
+  transition: visibility 0.1s linear, transform 0.2s linear;
+  -webkit-transition: visibility 0.1s linear, transform 0.2s linear;
+}
+
+.arise-questionnaire-button {
+  visibility: visible;
+  transform: translate(0, -5.8rem);
+  -webkit-transform: translate(0, -5.8rem);
+  transition: visibility 0.1s linear, transform 0.2s linear;
+  -webkit-transition: visibility 0.1s linear, transform 0.2s linear;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+}
+
+.blur {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.button {
+  position: absolute;
+  left: 0.1rem;
+  bottom: 0;
+  z-index: 999;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: url('../pic/button.png') no-repeat center center;
+  background-size: contain;
+  box-shadow: 0 0.7rem 0.8rem #d2d2d6;
+  -webkit-box-shadow: 0 0.25rem 0.8rem #d2d2d6;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+}
+
+.rotation {
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  box-shadow: 0.25rem -0.25rem 0.8rem #d2d2d6;
+  -webkit-box-shadow: 0.25rem -0.25rem 0.8rem #d2d2d6;
+}
+
+
+/*签到页面样式*/
+
+.sign {
+  width: 70%;
+  height: 40%;
+  margin: 0 auto;
+  padding-top: 18%;
+  text-align: center;
+}
+
+.coin {
+  width: 67%;
+  height: 67%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.icon-coin {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('../pic/coin.png') no-repeat center center;
+  background-size: contain;
+}
+
+.shining {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  background: url('../pic/shining.png') no-repeat center center;
+  background-size: contain;
+  z-index: 999;
+  top: -10.7%;
+  right: -9%;
+}
+
+.rule {
+  display: block;
+  margin-top: 1rem;
+  font-family: Microsoft YaHei;
+  font-size: 1.5rem;
+  color: #c3c3c3;
+}
+
+.signInButton {
+  width: 85%;
+  height: 20%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 999;
+  top: 30%;
+}
+
+.signInButton button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  color: #fff;
+  font-family: Microsoft YaHei;
+  font-size: 2.2rem;
+  background-color: #fbd538;
+  border: 0;
+  border-radius: 0.7rem;
+}
+
+button.success {
+  background-color: #fee16b;
+}
+
+.bonus-point {
+  display: none;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  z-index: 999;
+  background: url('../pic/addOnePoint.png') no-repeat center center;
+  background-size: contain;
+  -webkit-background-size: contain;
+  top: -1rem;
+  right: -1rem;
+}
+
+
+/*我的主页样式*/
+
+.header {
+  width: 100%;
+  padding-top: 5%;
+  text-align: center;
+}
+
+.user-photo {
+  display: block;
+  width: 11rem;
+  height: 11rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 0.7rem 0.7rem #d9d9d9;
+  -webkit-box-shadow: 0 0.7rem 0.7rem #d9d9d9;
+}
+
+.user-name {
+  font-size: 1.5rem;
+  color: #7e7e83;
+  margin-top: 1rem;
+}
+
+.score {
+  font-size: 1.2rem;
+  color: #7e7e83;
+}
+
+.thinLine {
+  display: block;
+  width: 55%;
+  height: 0.2rem;
+  background: url('../pic/thinLine.png') no-repeat center;
+  background-size: contain;
+  margin: 0.5rem auto;
+}
+
+.options {
+  width: 100%;
+  height: 38%;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 999;
+}
+
+.options ul {
+  height: 100%;
+}
+
+.options ul li {
+  height: 20%;
+  margin-bottom: 2%;
+  background-color: #fff;
+}
+
+.options ul li a {
+  width: 95%;
+  height: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+.item {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.5rem;
+  color: #7e7e83;
+}
+
+.icon-right {
+  display: table-cell;
+  vertical-align: middle;
+  width: 3%;
+  background: url('../pic/arrow.png') no-repeat center;
+  background-size: 0.9rem 1.8rem;
+}
+
+
+/*发布问卷和投票页面样式*/
+
+.release {
+  width: 100%;
+  height: 60%;
+  background-color: #fff;
+  position: relative;
+  z-index: 999;
+  margin-top: 1.2rem;
+}
+
+.release h3 {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #1aad19;
+  padding-left: 4%;
+  padding-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.release textarea {
+  margin-left: 4%;
+  outline: none;
+  width: 86%;
+  height: 30%;
+  resize: none;
+  border: none;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.release input {
+  text-align: center;
+  margin-left: 4%;
+  outline: none;
+  width: 65%;
+  font-size: 1.6rem;
+  font-family: 'Microsoft YaHei';
+  letter-spacing: 0.1rem;
+  border: none;
+}
+
+.release div {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+}
+
+.release button {
+  background-color: #56db55;
+  width: 10rem;
+  height: 3.8rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: Microsoft YaHei;
+  border: 1px solid #56db55;
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  right: 50%;
+}
+
+.borderLine {
+  display: block;
+  width: 100%;
+  height: 0.2rem;
+  margin: 0 auto;
+  background: url('../pic/boldLine.png') no-repeat center center;
+  background-size: contain;
+}
