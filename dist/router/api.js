@@ -15,7 +15,16 @@ const api = new Router({
     prefix: '/api'
 });
 api.
-    get('/check', (ctx) => __awaiter(this, void 0, void 0, function* () {
+    get('/wx_verify', (ctx) => __awaiter(this, void 0, void 0, function* () {
+    const echostr = yield ctx.request.query;
+    if (echostr) {
+        ctx.body = echostr;
+    }
+    else {
+        ctx.throw(403);
+    }
+}))
+    .get('/check', (ctx) => __awaiter(this, void 0, void 0, function* () {
     const userInfo = yield user.get_user('openid');
     const last_check_time = userInfo.last_check_time;
     const check_day = userInfo.check_day;

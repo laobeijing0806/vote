@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose = require("mongoose");
-const url = 'mongodb://127.0.0.1:27017/vote';
-mongoose.connect(url, err => {
+const config_1 = require("../config");
+mongoose.connect(config_1.url, err => {
     if (err) {
-        console.error('connect to %s error', url, err.message);
+        console.error('connect to %s error', config_1.url, err);
         process.exit(1);
     }
 });

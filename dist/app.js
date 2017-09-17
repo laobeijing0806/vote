@@ -10,9 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const Koa = require("koa");
 const bodyParser = require("koa-bodyparser");
-const serve = require("koa-static");
-const path = require("path");
-const index_1 = require("./router/index");
 const api_1 = require("./router/api");
 const app = new Koa();
 // 全局错误处理
@@ -29,8 +26,6 @@ app.use((ctx, next) => __awaiter(this, void 0, void 0, function* () {
     }
 }));
 app.use(bodyParser());
-app.use(serve(path.join(__dirname, '../static/resources')));
-app.use(index_1.default.routes());
 app.use(api_1.default.routes());
 let port = process.env.PORT || 3000;
 app.listen(port);

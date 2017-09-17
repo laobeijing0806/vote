@@ -1,10 +1,9 @@
 import * as mongoose from 'mongoose'
-
-const url = 'mongodb://127.0.0.1:27017/vote'
+import { url } from '../config'
 
 mongoose.connect(url, err => {
   if (err) {
-    console.error('connect to %s error', url, err.message)
+    console.error('connect to %s error', url, err)
     process.exit(1)
   }
 })
