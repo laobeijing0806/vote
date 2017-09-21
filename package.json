@@ -21,8 +21,8 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "start": "tsc -w & nodemon dist/app.js",
-    "dev": "tsc -w & NODE_ENV=dev nodemon dist/app.js"
+    "start": "rm -rf dist && tsc -w",
+    "dev": "tsc -w & NODE_ENV=dev nodemon dist/app"
   },
   "author": "liubojun",
   "license": "ISC"
